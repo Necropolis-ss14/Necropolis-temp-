@@ -1,0 +1,70 @@
+- type: entity
+  id: ton618
+  name: TON-618
+  components:
+  - type: Clickable
+  - type: AmbientSound
+    volume: -4
+    range: 135
+    sound:
+      path: /Audio/Effects/singularity.ogg
+  - type: Physics
+    bodyType: Dynamic
+    bodyStatus: InAir
+  - type: CanMoveInAir
+  - type: EventHorizon # To make the singularity consume things.
+    radius: 15
+    canBreachContainment: true
+    colliderFixtureId: EventHorizonCollider
+    consumerFixtureId: EventHorizonConsumer
+  - type: GravityWell # To make the singularity attract things.
+    baseRadialAcceleration: 30
+    maxRange: 125
+  - type: Fixtures
+    fixtures:
+      EventHorizonCollider:
+        shape:
+          !type:PhysShapeCircle
+            radius: 15
+        hard: true
+        restitution: 0.8
+        density: 99999
+      EventHorizonConsumer:
+        shape:
+          !type:PhysShapeCircle
+            radius: 15
+        hard: true
+  - type: Singularity
+    energy: 1000
+    level: 1
+    radsPerLevel: 6 # Goobstation - Radiation Overhaul
+  - type: RandomWalk # To make the singularity move around.
+    maxSpeed: 4
+    minSpeed: 1
+  - type: RadiationSource
+    slope: 0.005 # its emit really far away
+    intensity: 32 # Goobstation - Radiation Overhaul
+  - type: PointLight
+    enabled: true
+    radius: 120
+    color: "#fed480"
+    energy: 10
+  - type: Appearance
+  - type: WarpPoint
+    follow: true
+    location: TON-618
+  - type: Sprite
+    sprite: _Callisto/ton.rsi
+    layers:
+    - map: [ "VisualLevel" ]
+      state: singularity_1
+      shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.SingularityAppearanceKeys.Singularity:
+       VisualLevel:
+          1:
+            sprite: _Callisto/ton.rsi
+            state: singularity_1
+            scale: 1.0,1.0
+  - type: SupermatterImmune # Goobstation

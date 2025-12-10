@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "copyright": "",
+  "license": "CC-BY-SA-3.0",
+  "metaAtlas": false,
+  "size": {
+    "x": 2048,
+    "y": 2048
+  },
+  "states": [
+    {
+      "name": "singularity_1",
+      "directions": 1
+    }
+  ]
+}
