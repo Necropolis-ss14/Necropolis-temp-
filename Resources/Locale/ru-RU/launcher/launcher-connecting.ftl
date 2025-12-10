@@ -1,7 +1,7 @@
 ### Connecting dialog when you start up the game
 
-connecting-title = Adventure Time Station
-connecting-exit = Выйти
+connecting-title = Некрополис
+connecting-exit = Уйди за хлебом
 connecting-retry = Повторить
 connecting-reconnect = Переподключиться
 connecting-copy = Скопировать сообщение
@@ -9,14 +9,14 @@ connecting-redial = Перезапустить
 connecting-redial-wait = Пожалуйста подождите: { TOSTRING($time, "G3") }
 connecting-in-progress = Подключение к серверу...
 connecting-disconnected = Отключён от сервера:
-connecting-tip = Не умирай!
+connecting-tip = Все будет хорошо, дружище!
 connecting-window-tip = Совет { $numberTip }
 connecting-version = версия 2.5
 connecting-fail-reason =
     Не удалось подключиться к серверу:
     { $reason }
 connecting-state-NotConnecting = Не подключён
-connecting-state-ResolvingHost = Определение хоста
+connecting-state-ResolvingHost = Определение хоста(картошки)
 connecting-state-EstablishingConnection = Установка соединения
 connecting-state-Handshake = Handshake
 connecting-state-Connected = Подключён
